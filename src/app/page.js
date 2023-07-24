@@ -5,6 +5,8 @@ import SmallCard from "@/Components/SmallCard";
 import BigCard from "@/Components/BigCard";
 import jsonData from "../../public/files.json";
 import jsonData2 from "../../public/card1.json";
+import BiggerCard from "@/Components/BiggerCard";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
   // Map the data outside the JSX code
@@ -16,6 +18,7 @@ export default function Home() {
   const largeCards = jsonData2?.map(({img,title})=> (
     <BigCard key={img} img={img} title={title}/>
   ))
+  
 
 
   return (
@@ -38,7 +41,14 @@ export default function Home() {
           <h2  className="text-4xl font-semibold py-8">Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide">{largeCards}</div>
         </section>
+        <BiggerCard
+        img="https://i.imgur.com/6iV1BOz.jpg"
+        title="The Greatest Outdoors"
+        description="Wishlist Curated by Airbnb"
+        buttonText="Get inspired"
+        />
       </main>
+      <Footer/>
     </div>
   );
 }
