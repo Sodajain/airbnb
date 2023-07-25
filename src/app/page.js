@@ -7,6 +7,7 @@ import jsonData from "../../public/files.json";
 import jsonData2 from "../../public/card1.json";
 import BiggerCard from "@/Components/BiggerCard";
 import Footer from "@/Components/Footer";
+import React from "react";
 
 export default function Home() {
   // Map the data outside the JSX code
